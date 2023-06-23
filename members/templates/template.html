@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template File</title>
+</head>
+<link rel="stylesheet" href="{% static 'myglobal.css' %}">
+<body>
+    {% for x in member %}
+    <h1>{{forloop.counter}} {{ x }}</h1>
+    {% endfor %}
+</body>
+</html>
+
+{% comment "For Testing" %} {% for x in fruits %}
+<h1>{{ x }}</h1>
+{% endfor %} {% endcomment %}
+
+
+{%comment%}
+{% with firstname="Tobias" %}
+<h3>{{ firstname }}</h3>
+{% endwith %}
+{% endcomment %}
